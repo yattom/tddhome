@@ -1,4 +1,3 @@
-exports.Calc = {
-  add: function(a, b) { return a + b; },
-  mul: function(a, b) { return a + b; },
+exports.items = {
+  1: { name: 'Apple'},
 };

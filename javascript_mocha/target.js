@@ -34,27 +34,16 @@ class Receipt {
 
   total() {
     let sum = 0;
+    let sum_for_tax = 0;
     let discounted_items = this.discounted_items();
     for(let i = 0; i < discounted_items.length; i++) {
       sum += discounted_items[i].item.price * discounted_items[i].amount;
-    }
-    return sum;
-  }
-
-  tax() {
-    let sum = 0;
-    let discounted_items = this.discounted_items();
-    for(let i = 0; i < discounted_items.length; i++) {
-      if(discounted_items[i].item.tax_included == true) {
-        continue;
+      if(!discounted_items[i].item.tax_included) {
+        sum_for_tax += discounted_items[i].item.price * discounted_items[i].amount;
       }
-      sum += discounted_items[i].item.price * discounted_items[i].amount;
     }
-    return Math.floor(sum * 0.08);
-  }
-
-  total_including_tax() {
-    return this.total() + this.tax();
+    const tax = Math.floor(sum_for_tax * 0.08);
+    return { total: sum, including_tax: sum + tax };
   }
 };
 exports.Receipt = Receipt;

@@ -29,19 +29,19 @@ describe('total price', function() {
     it('only 1 item', function() {
       var receipt = new Receipt();
       receipt.add(items[1], 1);
-      assert.equal(receipt.total(), 100);
+      assert.equal(receipt.total().total, 100);
     });
     it('3 of same item', function() {
       var receipt = new Receipt();
       receipt.add(items[2], 3);
-      assert.equal(receipt.total(), 120);
+      assert.equal(receipt.total().total, 120);
     });
     it('several items', function() {
       var receipt = new Receipt();
       receipt.add(items[1], 5);
       receipt.add(items[2], 2);
       receipt.add(items[3], 1);
-      assert.equal(receipt.total(), 100 * 5 + 40 * 2 + 150);
+      assert.equal(receipt.total().total, 100 * 5 + 40 * 2 + 150);
     });
   });
 });
@@ -51,25 +51,25 @@ describe('total price including tax', function() {
     it('only 1 item', function() {
       var receipt = new Receipt();
       receipt.add(items[1], 1);
-      assert.equal(receipt.total_including_tax(), 108);
+      assert.equal(receipt.total().including_tax, 108);
     });
     it('3 of same item', function() {
       var receipt = new Receipt();
       receipt.add(items[2], 3);
-      assert.equal(receipt.total_including_tax(), 129);
+      assert.equal(receipt.total().including_tax, 129);
     });
     it('several items', function() {
       var receipt = new Receipt();
       receipt.add(items[1], 5);
       receipt.add(items[2], 2);
       receipt.add(items[3], 1);
-      assert.equal(receipt.total_including_tax(), Math.floor((100 * 5 + 40 * 2 + 150) * 1.08));
+      assert.equal(receipt.total().including_tax, Math.floor((100 * 5 + 40 * 2 + 150) * 1.08));
     });
     describe("price of tobbaco includes tax already", function() {
       it("single tobbaco", function() {
         var receipt = new Receipt();
         receipt.add(items[6], 1);
-        assert.equal(receipt.total_including_tax(), 420);
+        assert.equal(receipt.total().including_tax, 420);
       });
     });
   });
@@ -80,8 +80,8 @@ describe("discount when buying many", function() {
     it("3 Apples are discounted", function() {
       var receipt = new Receipt();
       receipt.add(items[1], 3);
-      assert.equal(receipt.total(), 280);
-      assert.equal(receipt.total_including_tax(), Math.floor(280 * 1.08));
+      assert.equal(receipt.total().total, 280);
+      assert.equal(receipt.total().including_tax, Math.floor(280 * 1.08));
     });
   });
 });

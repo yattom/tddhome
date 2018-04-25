@@ -26,6 +26,8 @@ class Receipt {
       if(this.items[i].item.name == 'Apple') {
         discounted_items.push({ item: { name: "3 Apples", price: 280 }, amount: Math.floor(this.items[i].amount / 3) } );
         discounted_items.push({ item: this.items[i].item, amount: this.items[i].amount % 3 } );
+      } else if(this.items[i].amount >= 11) {
+        discounted_items.push({ item: this.items[i].item, amount: this.items[i].amount - Math.floor(this.items[i].amount / 11) } );
       } else {
         discounted_items.push(this.items[i]);
       }

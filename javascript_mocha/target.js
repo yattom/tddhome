@@ -27,5 +27,9 @@ class Receipt {
     }
     return sum;
   }
+
+  total_including_tax() {
+    return Math.floor(this.total() * 1.08);
+  }
 };
 exports.Receipt = Receipt;

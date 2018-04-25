@@ -45,3 +45,25 @@ describe('total price', function() {
     });
   });
 });
+
+describe('total price including tax', function() {
+  describe('simply add up', function() {
+    it('only 1 item', function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 1);
+      assert.equal(receipt.total_including_tax(), 108);
+    });
+    it('3 of same item', function() {
+      var receipt = new Receipt();
+      receipt.add(items[2], 3);
+      assert.equal(receipt.total_including_tax(), 129);
+    });
+    it('several items', function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 5);
+      receipt.add(items[2], 2);
+      receipt.add(items[3], 1);
+      assert.equal(receipt.total_including_tax(), Math.floor((100 * 5 + 40 * 2 + 150) * 1.08));
+    });
+  });
+});

@@ -98,4 +98,11 @@ describe("discount when buying many", function() {
       assert.equal(receipt.total().total, 280 * 2 + 100);
     });
   });
+  describe('discount for anything', function() {
+    it("11 Shake Bento", function() {
+      var receipt = new Receipt();
+      receipt.add(items[5], 11);
+      assert.equal(receipt.total().total, 400 * 10);
+    });
+  });
 });

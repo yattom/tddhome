@@ -1,0 +1,13 @@
+To run tests:
+
+% npm install
+% npm test
+
+> javascript_mocha@1.0.0 test C:\Users\yattom\work\tddhome\javascript_mocha
+> mocha
+
+  Array
+    #indexOf()
+      Å„ should return -1 when the value is not present
+
+  1 passing (14ms)

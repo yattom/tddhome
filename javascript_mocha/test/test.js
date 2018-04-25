@@ -1,6 +1,7 @@
 // TDD traial for https://gist.github.com/yattom/c906216ab1fdf68a133ba0fbade1a395
-var assert = require('assert');
-var items = require('../target').items;
+const assert = require('assert');
+const items = require('../target').items;
+const Receipt = require('../target').Receipt;
 
 function assert_item(item, name, price) {
   assert.equal(item.name, name);
@@ -23,3 +24,12 @@ describe('defined items', function() {
   });
 });
 
+describe('total price', function() {
+  describe('simply add up', function() {
+    it('only 1 item', function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 1);
+      assert.equal(receipt.total(), 100);
+    });
+  });
+});

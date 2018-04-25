@@ -10,3 +10,22 @@ exports.items = {
   9: { name: 'Tea', price: 80 },
   10: { name:  'Coffee', price: 100 },
 };
+
+class Receipt {
+  constructor() {
+    this.items = [];
+  }
+
+  add(item, amount) {
+    this.items.push({ item: item, amount: amount });
+  }
+
+  total() {
+    let sum = 0;
+    for(let i = 0; i < this.items.length; i++) {
+      sum += this.items[i].item.price * this.items[i].amount;
+    }
+    return sum;
+  }
+};
+exports.Receipt = Receipt;

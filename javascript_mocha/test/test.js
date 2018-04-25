@@ -74,3 +74,14 @@ describe('total price including tax', function() {
     });
   });
 });
+
+describe("discount when buying many", function() {
+  describe('discount for Apple', function() {
+    it("3 Apples are discounted", function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 3);
+      assert.equal(receipt.total(), 280);
+      assert.equal(receipt.total_including_tax(), Math.floor(280 * 1.08));
+    });
+  });
+});

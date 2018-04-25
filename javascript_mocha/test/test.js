@@ -65,5 +65,12 @@ describe('total price including tax', function() {
       receipt.add(items[3], 1);
       assert.equal(receipt.total_including_tax(), Math.floor((100 * 5 + 40 * 2 + 150) * 1.08));
     });
+    describe("price of tobbaco includes tax already", function() {
+      it("single tobbaco", function() {
+        var receipt = new Receipt();
+        receipt.add(items[6], 1);
+        assert.equal(receipt.total_including_tax(), 420);
+      });
+    });
   });
 });

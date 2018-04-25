@@ -38,10 +38,10 @@ describe('total price', function() {
     });
     it('several items', function() {
       var receipt = new Receipt();
-      receipt.add(items[1], 5);
+      receipt.add(items[1], 2);
       receipt.add(items[2], 2);
       receipt.add(items[3], 1);
-      assert.equal(receipt.total().total, 100 * 5 + 40 * 2 + 150);
+      assert.equal(receipt.total().total, 100 * 2 + 40 * 2 + 150);
     });
   });
 });
@@ -60,10 +60,10 @@ describe('total price including tax', function() {
     });
     it('several items', function() {
       var receipt = new Receipt();
-      receipt.add(items[1], 5);
+      receipt.add(items[1], 2);
       receipt.add(items[2], 2);
       receipt.add(items[3], 1);
-      assert.equal(receipt.total().including_tax, Math.floor((100 * 5 + 40 * 2 + 150) * 1.08));
+      assert.equal(receipt.total().including_tax, Math.floor((100 * 2 + 40 * 2 + 150) * 1.08));
     });
     describe("price of tobbaco includes tax already", function() {
       it("single tobbaco", function() {
@@ -81,7 +81,21 @@ describe("discount when buying many", function() {
       var receipt = new Receipt();
       receipt.add(items[1], 3);
       assert.equal(receipt.total().total, 280);
+    });
+    it("discounted apples have tax", function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 3);
       assert.equal(receipt.total().including_tax, Math.floor(280 * 1.08));
+    });
+    it("6 Apples are discounted", function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 3 * 2);
+      assert.equal(receipt.total().total, 280 * 2);
+    });
+    it("6 of 7 Apples are discounted", function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 3 * 2 + 1);
+      assert.equal(receipt.total().total, 280 * 2 + 100);
     });
   });
 });

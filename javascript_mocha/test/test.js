@@ -31,5 +31,17 @@ describe('total price', function() {
       receipt.add(items[1], 1);
       assert.equal(receipt.total(), 100);
     });
+    it('3 of same item', function() {
+      var receipt = new Receipt();
+      receipt.add(items[2], 3);
+      assert.equal(receipt.total(), 120);
+    });
+    it('several items', function() {
+      var receipt = new Receipt();
+      receipt.add(items[1], 5);
+      receipt.add(items[2], 2);
+      receipt.add(items[3], 1);
+      assert.equal(receipt.total(), 100 * 5 + 40 * 2 + 150);
+    });
   });
 });

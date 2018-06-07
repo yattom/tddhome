@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java_junit4_idea/java_junit4.iml" filepath="$PROJECT_DIR$/java_junit4_idea/java_junit4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_junit5_idea/java_junit5_idea.iml" filepath="$PROJECT_DIR$/java_junit5_idea/java_junit5_idea.iml" />
       <module fileurl="file://$PROJECT_DIR$/javascript_qunit_browser/javascript_qunit_browser.iml" filepath="$PROJECT_DIR$/javascript_qunit_browser/javascript_qunit_browser.iml" />
     </modules>
   </component>

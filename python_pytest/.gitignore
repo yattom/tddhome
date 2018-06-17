@@ -1,0 +1,13 @@
+Lib/
+Scripts/
+Bin/
+lib/
+include/
+tcl/
+man/
+share/
+__pycache__/
+.pytest_cache/
+*pyc
+pyvenv.cfg
+pip-selfcheck.json

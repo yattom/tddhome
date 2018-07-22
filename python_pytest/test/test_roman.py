@@ -1,4 +1,5 @@
 import pytest
+import re
 
 from collections import namedtuple
 
@@ -19,22 +20,25 @@ class WrappedRule:
     def __repr__(self):
         return "WrappedRule({})".format(self._rule)
 
+
 class RuleSet:
     def __init__(self):
         self._rules = []
         self._validations = []
 
     def add_rule(self, rule):
-        self._rules.append(rule)
+        self._rules.append(WrappedRule(rule))
 
     def add_validation(self, validation):
         self._validations.append(validation)
 
     def get_applicable(self, state):
-        constructed, remain = state
         for r in self._rules:
-            if r.is_applicable(constructed, remain):
-                return WrappedRule(r)
+            if r.is_applicable(state):
+                return r
+
+    def get_applicable_rules(self, state):
+        return [r for r in self._rules if r.is_applicable(state)]
 
     def validate(self, state):
         constructed, remain = state
@@ -45,6 +49,12 @@ def validate_appearance(s, c, max):
     if s.count(c) > max:
         raise ValueError("'{}' cannot appear more than {} times. ({} in '{}')".format(c, max, s.count(c), s))
     return True
+
+def validate_order(s, prec, follow):
+    if re.search("[{}].*{}".format(''.join(follow), prec), s):
+        raise ValueError("'{}' cannot precede '{}'. (s='{}')".format(follow, prec, s))
+    return True
+
 
 ROMAN_RULES = RuleSet()
 ROMAN_RULES.add_rule(
@@ -63,27 +73,90 @@ ROMAN_RULES.add_rule(
          name="<5")
 )
 ROMAN_RULES.add_rule(
-    Rule(is_applicable=lambda s, n: 5 < n,
+    Rule(is_applicable=lambda s, n: 5 < n < 10,
          apply=lambda s, n: (roman(5) + roman(n - 5), 0),
          name=">5")
 )
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: n == 10,
+         apply=lambda s, n: ("X", 0),
+         name="10->X")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: 0 < n < 10,
+         apply=lambda s, n: (roman(10 - n) + roman(10), 0),
+         name="<10")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: 10 < n < 50,
+         apply=lambda s, n: (roman(10) + roman(n - 10), 0),
+         name=">10")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: n == 50,
+         apply=lambda s, n: ("L", 0),
+         name="50->L")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: 0 < n < 50,
+         apply=lambda s, n: (roman(50 - n) + roman(50), 0),
+         name="<50")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: 50 < n,
+         apply=lambda s, n: (roman(50) + roman(n - 50), 0),
+         name=">50")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: n == 100,
+         apply=lambda s, n: ("C", 0),
+         name="100->C")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: 0 < n < 100,
+         apply=lambda s, n: (roman(100 - n) + roman(100), 0),
+         name="<100")
+)
+ROMAN_RULES.add_rule(
+    Rule(is_applicable=lambda s, n: 100 < n,
+         apply=lambda s, n: (roman(100) + roman(n - 100), 0),
+         name=">100")
+)
 ROMAN_RULES.add_validation(
     Validation(validate=lambda s, n: validate_appearance(s, "V", 1),
-               name="count(V)<2")
+               name="count(V)<=1")
+)
+ROMAN_RULES.add_validation(
+    Validation(validate=lambda s, n: validate_appearance(s, "X", 3),
+               name="count(X)<=3")
+)
+ROMAN_RULES.add_validation(
+    Validation(validate=lambda s, n: validate_appearance(s, "L", 1),
+               name="count(L)<=1")
 )
 
 
 def roman(n):
-    state = State("", n)
-    while state.remain > 0:
-        r = ROMAN_RULES.get_applicable(state)
-        new_state = r.apply(state)
+    init_state = State("", n)
+    queue = [(init_state, r) for r in ROMAN_RULES.get_applicable_rules(init_state)]
+    resolved = set()
+    while queue:
+        queue.sort(key=lambda e: e[0].remain)
+        trial = queue.pop(0)
+        if trial in resolved:
+            continue
+        resolved.add(trial)
+        state, rule = trial
+        new_state = rule.apply(state)
         try:
             ROMAN_RULES.validate(new_state)
-        except:
-            break
-        state = new_state
-    return state.constructed
+            if new_state.remain == 0:
+                return new_state.constructed
+            else:
+                queue += [(new_state, rr) for rr in ROMAN_RULES.get_applicable_rules(new_state)]
+        except ValueError as e:
+            continue
+
 
 def test_1():
     assert roman(1) == "I"
@@ -102,6 +175,30 @@ def test_7():
 
 def test_9():
     assert roman(9) == "IX"
+
+def test_13():
+    assert roman(13) == "XIII"
+
+def test_14():
+    assert roman(14) == "XIV"
+
+def test_16():
+    assert roman(16) == "XVI"
+
+def test_19():
+    assert roman(19) == "XIX"
+
+def test_20():
+    assert roman(20) == "XX"
+
+def test_50():
+    assert roman(50) == "L"
+
+def test_99():
+    assert roman(99) == "IC"
+
+def test_100():
+    assert roman(100) == "C"
 
 class RulesTest:
     def test_rule_applicatble(self):

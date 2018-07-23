@@ -158,47 +158,25 @@ def roman(n):
             continue
 
 
-def test_1():
-    assert roman(1) == "I"
+@pytest.mark.parametrize("number,roman_num", [
+    (1, "I"),
+    (3, "III"),
+    (4, "IV"),
+    (5, "V"),
+    (7, "VII"),
+    (9, "IX"),
+    (13, "XIII"),
+    (14, "XIV"),
+    (16, "XVI"),
+    (19, "XIX"),
+    (20, "XX"),
+    (50, "L"),
+    (99, "IC"),
+    (100, "C"),
+])
+def test_roman(number, roman_num):
+    assert roman(number) == roman_num
 
-def test_3():
-    assert roman(3) == "III"
-
-def test_4():
-    assert roman(4) == "IV"
-
-def test_5():
-    assert roman(5) == "V"
-
-def test_7():
-    assert roman(7) == "VII"
-
-def test_9():
-    assert roman(9) == "IX"
-
-def test_13():
-    assert roman(13) == "XIII"
-
-def test_14():
-    assert roman(14) == "XIV"
-
-def test_16():
-    assert roman(16) == "XVI"
-
-def test_19():
-    assert roman(19) == "XIX"
-
-def test_20():
-    assert roman(20) == "XX"
-
-def test_50():
-    assert roman(50) == "L"
-
-def test_99():
-    assert roman(99) == "IC"
-
-def test_100():
-    assert roman(100) == "C"
 
 class RulesTest:
     def test_rule_applicatble(self):

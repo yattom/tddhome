@@ -61,21 +61,49 @@ def build_roman_rules():
              apply=lambda s, n: (s + "I", n - 1),
              name="1->I")
     )
-    rules.add_rule(
-        Rule(is_applicable=lambda s, n: n == 5,
-             apply=lambda s, n: ("V", 0),
-             name="5->V")
-    )
-    rules.add_rule(
-        Rule(is_applicable=lambda s, n: 0 < n < 5,
-             apply=lambda s, n: (roman(5 - n) + roman(5), 0),
-             name="<5")
-    )
-    rules.add_rule(
-        Rule(is_applicable=lambda s, n: 5 < n < 10,
-             apply=lambda s, n: (roman(5) + roman(n - 5), 0),
-             name=">5")
-    )
+
+    digits = [(5, "V")]  #, (10, "X")]  #, (50, "L"), (100, "C")]
+    for i in range(len(digits)):
+        num, dgt = digits[i]
+        rules.add_rule(
+            Rule(is_applicable=lambda s, n: n == num,
+                apply=lambda s, n: (dgt, 0),
+                name="{}->{}".format(num, dgt))
+        )
+        rules.add_rule(
+            Rule(is_applicable=lambda s, n: 0 < n < num,
+                apply=lambda s, n: (roman(num - n) + roman(num), 0),
+                name="<{}".format(num))
+        )
+        if i < len(digits) - 1:
+            next_num = digits[i + 1][0]
+            print(i, num, next_num)
+            rules.add_rule(
+                Rule(is_applicable=lambda s, n: num < n < next_num,
+                    apply=lambda s, n: (roman(num) + roman(n - num), 0),
+                    name=">{}".format(num))
+            )
+        else:
+            rules.add_rule(
+                Rule(is_applicable=lambda s, n: num < n < 10,
+                    apply=lambda s, n: (roman(num) + roman(n - num), 0),
+                    name=">{}".format(num))
+            )
+#   rules.add_rule(
+#       Rule(is_applicable=lambda s, n: n == 5,
+#            apply=lambda s, n: ("V", 0),
+#            name="5->V")
+#   )
+#   rules.add_rule(
+#       Rule(is_applicable=lambda s, n: 0 < n < 5,
+#            apply=lambda s, n: (roman(5 - n) + roman(5), 0),
+#            name="<5")
+#   )
+#   rules.add_rule(
+#       Rule(is_applicable=lambda s, n: 5 < n < 10,
+#            apply=lambda s, n: (roman(5) + roman(n - 5), 0),
+#            name=">5")
+#   )
     rules.add_rule(
         Rule(is_applicable=lambda s, n: n == 10,
              apply=lambda s, n: ("X", 0),

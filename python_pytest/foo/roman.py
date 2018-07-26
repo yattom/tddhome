@@ -18,6 +18,10 @@ class WrappedRule:
     def __repr__(self):
         return "WrappedRule({})".format(self._rule)
 
+    def get_name(self):
+        return self._rule.name
+    name = property(get_name)
+
 
 class RuleSet:
     def __init__(self):
@@ -168,6 +172,10 @@ ROMAN_RULES = build_roman_rules()
 
 
 def roman(n):
+    global _rules_log, _log_valid_only
+    def log(e):
+        if not _rules_log is None:
+            _rules_log.append(e)
     init_state = State("", n)
     queue = [(init_state, r) for r in ROMAN_RULES.get_applicable_rules(init_state)]
     resolved = set()
@@ -178,6 +186,8 @@ def roman(n):
             continue
         resolved.add(trial)
         state, rule = trial
+        saved_log = get_log()
+        log((state.remain, rule.name))
         new_state = rule.apply(state)
         try:
             ROMAN_RULES.validate(new_state)
@@ -186,8 +196,24 @@ def roman(n):
             else:
                 queue += [(new_state, rr) for rr in ROMAN_RULES.get_applicable_rules(new_state)]
         except ValueError as e:
+            if _log_valid_only:
+                _rules_log = saved_log
             continue
 
+_rules_log = None
+_log_valid_only = True
 
-def convert(args):
-    return roman(*args)
+def start_logging(log_valid_only=True):
+    global _rules_log, _log_valid_only
+    _log_valid_only = log_valid_only
+    _rules_log = []
+
+def end_logging():
+    global _rules_log
+    _rules_log = None
+
+def get_log():
+    global _rules_log
+    if type(_rules_log) == list:
+        return _rules_log[:]
+    return None

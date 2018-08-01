@@ -14,9 +14,18 @@ from foo.roman import roman, Rule, RuleSet, State, ROMAN_RULES, start_logging, e
     (16, "XVI"),
     (19, "XIX"),
     (20, "XX"),
+    (39, "XXXIX"),
     (50, "L"),
     (99, "IC"),
     (100, "C"),
+    (400, "CD"),
+    (450, "CDL"),
+    (900, "CM"),
+    (999, "IM"),
+    (3000, "MMM"),
+    (3800, "MMMDCCC"),
+    (3900, "MMMCM"),
+    (3999, "MMMIM"),
 ])
 def test_roman(number, roman_num):
     assert roman(number) == roman_num
@@ -27,6 +36,7 @@ def test_roman(number, roman_num):
     (4, [(4, '<5'), (1, "1->I"), (5, '5->V')]),
     (8, [(8, '>5'), (5, '5->V'), (3, '1->I'), (2, '1->I'), (1, '1->I')]),
     (16, [(16, '>10'), (10, '10->X'), (6, '>5'), (5, '5->V'), (1, '1->I')]),
+    (48, [(48, '<50'), (2, '1->I'), (1, '1->I'), (50, '50->L')]),
 ])
 def test_roman_applied_rules(number, expected_rules):
     start_logging(log_valid_only=True)
@@ -41,6 +51,7 @@ def test_roman_applied_rules(number, expected_rules):
     (4, [(4, '<5'), (1, "1->I"), (5, '5->V')]),
     (8, [(8, '>5'), (5, '5->V'), (3, '1->I'), (2, '1->I'), (1, '1->I')]),
     (16, [(16, '>10'), (10, '10->X'), (6, '>5'), (5, '5->V'), (1, '1->I')]),
+    (48, [(48, '>10'), (10, '10->X'), (38, '>10'), (10, '10->X'), (28, '>10'), (10, '10->X'), (18, '>10'), (10, '10->X'), (8, '>5'), (5, '5->V'), (3, '1->I'), (2, '1->I'), (1, '1->I'), (48, '<50'), (2, '1->I'), (1, '1->I'), (50, '50->L')]),
 ])
 def test_roman_tried_rules(number, expected_rules):
     start_logging(log_valid_only=False)

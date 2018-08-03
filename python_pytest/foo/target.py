@@ -1,2 +1,2 @@
 def func_42():
-    return 64
+    return 42

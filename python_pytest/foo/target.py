@@ -1,2 +1,3 @@
-def func_42():
-    return 64
+
+def hello():
+    return "Hello, world!"

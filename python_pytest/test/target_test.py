@@ -1,4 +1,4 @@
-from foo import target
+from foo.hello import *
 
-def test_func_42():
-    assert target.func_42() == 42
+def test_hello():
+    pass

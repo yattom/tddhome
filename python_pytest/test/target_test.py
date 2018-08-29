@@ -1,44 +1,39 @@
 import pytest
-from foo.hello import *
+from foo.target import *
 
-def test_hello():
-    string = hello()
-    assert string == "Hello, World!"
 
-def test_計算機_足し算():
-    answer = Calculator().plus(1, 1)
-    assert answer == 2
 
-def test_計算機_足し算_計算できない場合():
-    answer = Calculator().plus("a", "b")
-    assert answer == 0
+class Test3の倍数でFizz():
+    def test_3の場合(self):
+        assert work(3) == "Fizz"
 
-def test_計算機_引き算():
-    answer = Calculator().minus(2, 1)
-    assert answer == 1
+    def test_18の場合(self):
+        assert work(18) == "Fizz"
 
-def test_計算機_引き算_計算できない場合():
-    answer = Calculator().minus("a", "b")
-    assert answer == 0
 
-@pytest.mark.parametrize("n, e", [
-    (1, [1]),  # 1の場合
-    (2, [2]),  # 最小の素数
-    (4, [2, 2]),  # 2の乗数
-    (6, [2, 3]),  # 適当な小さい数
-    (100, [2, 2, 5, 5]),  # 適当な大きい数
-    ])
-def test_素因数分解(n, e):
-    assert prime_factoring(n) == e
+class Test5の倍数でBuzz():
+    def test_5の場合(self):
+        assert work(5) == "Buzz"
 
-def test_最小の素因数_最小の素数の場合():
-    assert get_smallest_prime(2) == 2
+    def test_20の場合(self):
+        assert work(20) == "Buzz"
 
-def test_最小の素因数_3の場合():
-    assert get_smallest_prime(3) == 3
+class Test15の倍数でFizzBuzz():
+    def test_15の場合(self):
+        assert work(15) == "FizzBuzz"
 
-def test_最小の素因数_3の乗数の場合():
-    assert get_smallest_prime(9) == 3
+    def test_30の場合(self):
+        assert work(30) == "FizzBuzz"
 
-def test_最小の素因数_大きな素数の場合():
-    assert get_smallest_prime(103) == 103
+class Testそれ以外の数():
+    def test_1の場合1(self):
+        assert work(1) == 1
+
+    def test_2の場合2(self):
+        assert work(2) == 2
+
+def test_1から15までの結果():
+    assert count_up()[:15] == [1,2,"Fizz",4,"Buzz",
+                          "Fizz",7,8,"Fizz","Buzz",
+                          11,"Fizz",13,14,"FizzBuzz"]
+

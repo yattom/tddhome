@@ -18,6 +18,7 @@ pytest-watch = "*"
 six = "*"
 watchdog = "*"
 PyYAML = "*"
+tddhome-python-pytest = {editable = true, path = "."}
 
 [dev-packages]
 

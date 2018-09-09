@@ -30,20 +30,27 @@ TAX_RATE = 0.08
 
 class Cart:
     def __init__(self):
-        self.contents = []
+        self.contents = {}
 
     def add_item(self, item_id, amount):
         if item_id not in ITEMS:
             raise ValueError(f"invalid item_id {item_id}")
         if type(amount) != int or amount <= 0:
             raise ValueError(f"invalid amount {amount}")
-        self.contents.append((item_id, amount))
+        if not item_id in self.contents:
+            self.contents[item_id] = 0
+        self.contents[item_id] += amount
+
+    def get_item_amount(self, item_id):
+        if item_id not in self.contents:
+            return 0
+        return self.contents[item_id]
 
     def get_items_tax_excluded(self):
-        return [(i, a) for i, a in self.contents if not ITEMS[i].is_tax_included]
+        return [(i, a) for i, a in self.contents.items() if not ITEMS[i].is_tax_included]
 
     def get_items_tax_included(self):
-        return [(i, a) for i, a in self.contents if ITEMS[i].is_tax_included]
+        return [(i, a) for i, a in self.contents.items() if ITEMS[i].is_tax_included]
 
     def total(self):
         total_tax_excluded = sum(ITEMS[item_id].get_subtotal(amount)

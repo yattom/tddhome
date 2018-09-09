@@ -42,13 +42,19 @@ def test_リンゴは1個100円だが3つ買うと280円になる(cart, amount, 
 class TestCart:
     def test_最初は空(self, cart):
         assert cart.total() == 0
+        assert cart.get_item_amount(1) == 0
 
     def test_存在しない商品IDなら例外(self, cart):
-        cart = Cart()
         with pytest.raises(ValueError):
             cart.add_item(999, 1)
 
     def test_個数は自然数なら例外(self, cart):
-        cart = Cart()
         with pytest.raises(ValueError):
             cart.add_item(1, 0)
+
+    def test_同じ商品IDを複数回に分けて追加してもまとまる(self, cart):
+        cart.add_item(1, 1)
+        cart.add_item(1, 2)
+        cart.add_item(1, 3)
+        assert 6 == cart.get_item_amount(1)
+

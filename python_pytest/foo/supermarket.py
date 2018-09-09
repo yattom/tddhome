@@ -1,3 +1,3 @@
 class Cart:
     def total(self):
-        return -1
+        return 0

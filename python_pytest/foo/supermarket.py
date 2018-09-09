@@ -1,14 +1,19 @@
+class Item:
+    def __init__(self, price, is_tax_included=False):
+        self.price = price
+        self.is_tax_included = is_tax_included
+
 ITEMS = {
-    1: 100,
-    2: 40,
-    3: 150,
-    4: 350,
-    5: 400,
-    6: 420,
-    7: 440,
-    8: 100,
-    9: 80,
-    10: 100,
+    1: Item(100),
+    2: Item(40),
+    3: Item(150),
+    4: Item(350),
+    5: Item(400),
+    6: Item(420, is_tax_included=True),
+    7: Item(440, is_tax_included=True),
+    8: Item(100),
+    9: Item(80),
+    10: Item(100),
 }
 
 TAX_RATE = 0.08
@@ -24,9 +29,19 @@ class Cart:
             raise ValueError(f"invalid amount {amount}")
         self.contents.append((item_id, amount))
 
-    def simple_total(self):
-        return sum([ITEMS[item_id] * amount for item_id, amount in self.contents])
+    def get_items_tax_excluded(self):
+        return [(i, a) for i, a in self.contents if not ITEMS[i].is_tax_included]
+
+    def get_items_tax_included(self):
+        return [(i, a) for i, a in self.contents if ITEMS[i].is_tax_included]
 
     def total(self):
-        return self.simple_total() * (1 + TAX_RATE)
+        total_tax_excluded = sum(ITEMS[item_id].price * amount
+                                 for item_id, amount
+                                 in self.get_items_tax_excluded())
+        total_tax_included = sum(ITEMS[item_id].price * amount
+                                 for item_id, amount
+                                 in self.get_items_tax_included())
+        return int(total_tax_excluded * (1 + TAX_RATE)) + total_tax_included
+
 

@@ -6,18 +6,25 @@ from foo.supermarket import *
 def cart():
     return Cart()
 
-def test_checkout_items_りんご2個とのり弁1個で550円(cart):
-    cart.add_item(1, 2)
-    cart.add_item(4, 1)
-    assert cart.simple_total() == 550
-
 def test_消費税込みの金額_りんご1個で108円(cart):
     cart.add_item(1, 1)
     assert cart.total() == 108
 
+def test_消費税込みの金額_小数点以下切り捨て_みかん1個で43円(cart):
+    cart.add_item(2, 1)
+    assert cart.total() == 43
+
+def test_消費税込みの金額_小数点以下切り捨て_みかん4個で172円(cart):
+    cart.add_item(2, 4)
+    assert cart.total() == 172 == (40 * 4) + int(40 * 4 * 0.08)
+
+def test_消費税込みの金額_タバコは内税なので420円(cart):
+    cart.add_item(6, 1)
+    assert cart.total() == 420
+
 class TestCart:
     def test_最初は空(self, cart):
-        assert cart.simple_total() == 0
+        assert cart.total() == 0
 
     def test_存在しない商品IDなら例外(self, cart):
         cart = Cart()

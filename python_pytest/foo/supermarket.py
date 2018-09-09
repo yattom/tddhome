@@ -1,10 +1,20 @@
+from collections import namedtuple
+
+Service = namedtuple('Service', ['unit', 'price'])
+
 class Item:
-    def __init__(self, price, is_tax_included=False):
+    def __init__(self, price, is_tax_included=False, service=None):
         self.price = price
         self.is_tax_included = is_tax_included
+        self.service = service
+
+    def get_subtotal(self, amount):
+        if self.service:
+            return int(amount / self.service.unit) * self.service.price + (amount % self.service.unit) * self.price
+        return self.price * amount
 
 ITEMS = {
-    1: Item(100),
+    1: Item(100, service=Service(3, 280)),
     2: Item(40),
     3: Item(150),
     4: Item(350),
@@ -36,10 +46,10 @@ class Cart:
         return [(i, a) for i, a in self.contents if ITEMS[i].is_tax_included]
 
     def total(self):
-        total_tax_excluded = sum(ITEMS[item_id].price * amount
+        total_tax_excluded = sum(ITEMS[item_id].get_subtotal(amount)
                                  for item_id, amount
                                  in self.get_items_tax_excluded())
-        total_tax_included = sum(ITEMS[item_id].price * amount
+        total_tax_included = sum(ITEMS[item_id].get_subtotal(amount)
                                  for item_id, amount
                                  in self.get_items_tax_included())
         return int(total_tax_excluded * (1 + TAX_RATE)) + total_tax_included

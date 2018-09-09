@@ -11,6 +11,8 @@ ITEMS = {
     10: 100,
 }
 
+TAX_RATE = 0.08
+
 class Cart:
     def __init__(self):
         self.contents = []
@@ -22,6 +24,9 @@ class Cart:
             raise ValueError(f"invalid amount {amount}")
         self.contents.append((item_id, amount))
 
-    def total(self):
+    def simple_total(self):
         return sum([ITEMS[item_id] * amount for item_id, amount in self.contents])
+
+    def total(self):
+        return self.simple_total() * (1 + TAX_RATE)
 

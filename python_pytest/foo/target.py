@@ -5,8 +5,11 @@ class Button:
         self.price = price
 
     def push(self):
-        if self.vm.coin == self.price:
+        if self.is_lit():
             self.vm.cup = self.item
+
+    def is_lit(self):
+        return self.vm.coin >= self.price
 
 class VendingMachine:
     EMPTY = object()

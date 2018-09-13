@@ -36,3 +36,17 @@ def test_ボタンによって商品を選べる(vm, item):
     vm.insert_100()
     vm.buttons[item].push()
     assert vm.get_cup() == item
+
+def test_100円いれるとコーラとウーロン茶のボタンが光る(vm):
+    vm.insert_100()
+    assert vm.buttons['コーラ'].is_lit()
+    assert vm.buttons['ウーロン茶'].is_lit()
+    assert not vm.buttons['レッドブル'].is_lit()
+
+def test_200円いれるとコーラとウーロン茶とレッドブルのボタンが光る(vm):
+    vm.insert_100()
+    vm.insert_100()
+    assert vm.buttons['コーラ'].is_lit()
+    assert vm.buttons['ウーロン茶'].is_lit()
+    assert vm.buttons['レッドブル'].is_lit()
+

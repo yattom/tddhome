@@ -1,3 +1,18 @@
+from enum import Enum, auto
+
+class Coin(Enum):
+    COIN_10 = auto()
+    COIN_50 = auto()
+    COIN_100 = auto()
+    COIN_500 = auto()
+
+COIN_VALUES = {
+    Coin.COIN_10: 10,
+    Coin.COIN_50: 50,
+    Coin.COIN_100: 100,
+    Coin.COIN_500: 500,
+}
+
 class Button:
     def __init__(self, vm, item, price):
         self.vm = vm
@@ -15,7 +30,7 @@ class VendingMachine:
     EMPTY = object()
 
     cup = EMPTY
-    coin = 0
+    _coin = 0
 
     def __init__(self):
         self.buttons = {
@@ -27,5 +42,9 @@ class VendingMachine:
     def get_cup(self):
         return self.cup
 
-    def insert_100(self):
-        self.coin += 100
+    def insert(self, coin):
+        self._coin += COIN_VALUES[coin]
+
+    @property
+    def coin(self):
+        return self._coin

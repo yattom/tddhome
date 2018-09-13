@@ -1,13 +1,28 @@
-class VendingMachine:
-    cup = None
-    coin = 0
+class Button:
+    def __init__(self, vm, item, price):
+        self.vm = vm
+        self.item = item
+        self.price = price
 
     def push(self):
-        if self.coin == 100:
-            self.cup = 'コーラ'
+        if self.vm.coin == self.price:
+            self.vm.cup = self.item
+
+class VendingMachine:
+    EMPTY = object()
+
+    cup = EMPTY
+    coin = 0
+
+    def __init__(self):
+        self.buttons = {
+            'コーラ': Button(self, 'コーラ', 100),
+            'ウーロン茶': Button(self, 'ウーロン茶', 100),
+            'レッドブル': Button(self, 'レッドブル', 200),
+        }
 
     def get_cup(self):
         return self.cup
 
     def insert_100(self):
-        self.coin = 100
+        self.coin += 100

@@ -28,6 +28,14 @@ class Button:
     def is_lit(self):
         return self.vm.coin >= self.price
 
+
+class ReturnButton:
+    def __init__(self, vm):
+        self.vm = vm
+
+    def push(self):
+        self.vm.dispense_changes()
+
 class VendingMachine:
     EMPTY = object()
 
@@ -40,6 +48,8 @@ class VendingMachine:
             'ウーロン茶': Button(self, 'ウーロン茶', 100),
             'レッドブル': Button(self, 'レッドブル', 200),
         }
+        self.return_button = ReturnButton(self)
+        self.change_pocket = []
 
     def get_cup(self):
         return self.cup

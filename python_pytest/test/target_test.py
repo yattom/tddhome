@@ -86,3 +86,9 @@ class Testお釣り計算:
         assert vm.change_pocket == [ Coin.COIN_100, Coin.COIN_100, Coin.COIN_100 ]
         assert vm.coin == 0
 
+def test_返却ボタンを押すとお金が戻ってくる(vm, coin100):
+    vm.return_button.push()
+    assert vm.change_pocket == [ Coin.COIN_100 ]
+
+def test_最初はお釣りボックスは空っぽ(vm):
+    assert vm.change_pocket == []

@@ -22,6 +22,8 @@ class Button:
     def push(self):
         if self.is_lit():
             self.vm.cup = self.item
+            self.vm.deduct(self.price)
+            self.vm.dispense_changes()
 
     def is_lit(self):
         return self.vm.coin >= self.price
@@ -45,6 +47,19 @@ class VendingMachine:
     def insert(self, coin):
         self._coin += COIN_VALUES[coin]
 
+    def deduct(self, price):
+        self._coin -= price
+
+    def dispense_changes(self):
+        coins = sorted([c for c in Coin], key=lambda c: COIN_VALUES[c], reverse=True)
+        changes = []
+        for coin in coins:
+            while self._coin >= COIN_VALUES[coin]:
+                self._coin -= COIN_VALUES[coin]
+                changes.append(coin)
+        self.change_pocket = changes
+
     @property
     def coin(self):
         return self._coin
+

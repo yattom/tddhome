@@ -19,6 +19,7 @@ six = "*"
 watchdog = "*"
 PyYAML = "*"
 tddhome-python-pytest = {editable = true, path = "."}
+pytest-mock = "*"
 
 [dev-packages]
 

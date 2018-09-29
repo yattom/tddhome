@@ -1,4 +1,5 @@
-from foo import target
+from foo.target import hello
 
-def test_func_42():
-    assert target.func_42() == 42
+def test_hello_world():
+    actual = hello()
+    assert "Hello, World!" == actual

@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+argh = "*"
+atomicwrites = "*"
+attrs = "*"
+colorama = "*"
+docopt = "*"
+more-itertools = "*"
+pathtools = "*"
+pluggy = "*"
+py = "*"
+pytest = "*"
+pytest-watch = "*"
+six = "*"
+watchdog = "*"
+PyYAML = "*"
+pytest-bdd = "*"
+flask = "*"
+tddhome-python-pytest-web = {editable = true, path = "."}
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

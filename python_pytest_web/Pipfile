@@ -21,6 +21,7 @@ PyYAML = "*"
 pytest-bdd = "*"
 flask = "*"
 tddhome-python-pytest-web = {editable = true, path = "."}
+pytest-splinter = "*"
 
 [dev-packages]
 

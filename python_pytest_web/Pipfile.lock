@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "24c06192abfe0cbdeea20e5aa08ddc1ef18e9f2333689e87e104ecef3beb4b8f"
+            "sha256": "ea557a79813c9a8e3afbf9492312c97cb953538a011fd0fdbe312356cbf6f1ed"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -162,6 +162,13 @@
             "index": "pypi",
             "version": "==2.21.0"
         },
+        "pytest-splinter": {
+            "hashes": [
+                "sha256:a008cb02063aa56f987fde474a0c9beb78faee11679feefbec28e52464d3fd79"
+            ],
+            "index": "pypi",
+            "version": "==2.0.0"
+        },
         "pytest-watch": {
             "hashes": [
                 "sha256:06136f03d5b361718b8d0d234042f7b2f203910d8568f63df2f866b547b3d4b9"
@@ -186,6 +193,14 @@
             "index": "pypi",
             "version": "==3.13"
         },
+        "selenium": {
+            "hashes": [
+                "sha256:ab192cd046164c40fabcf44b47c66c8b12495142f4a69dcc55ea6eeef096e614",
+                "sha256:fdb6b1143d8899e8a32e358ad05bf5d89a480dbac359dbbd341592aa8696dcd1"
+            ],
+            "markers": "python_version < '4' and python_version != '3.2.*' and python_version >= '2.6' and python_version != '3.1.*' and python_version != '3.3.*' and python_version != '3.0.*'",
+            "version": "==3.14.1"
+        },
         "six": {
             "hashes": [
                 "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9",
@@ -194,9 +209,25 @@
             "index": "pypi",
             "version": "==1.11.0"
         },
+        "splinter": {
+            "hashes": [
+                "sha256:08c6ed2209ce0520c2f898ad30822ba8f52ed9226bda10c0253c5ea9fe418146",
+                "sha256:c8442149e03b0e4c3cf721c4dc1fb00feb1faf52872f85921e07b0cbde467e93"
+            ],
+            "markers": "python_version < '4' and python_version != '3.2.*' and python_version >= '2.6' and python_version != '3.1.*' and python_version != '3.3.*' and python_version != '3.0.*'",
+            "version": "==0.9.0"
+        },
         "tddhome-python-pytest-web": {
             "editable": true,
             "path": "."
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf",
+                "sha256:b5725a0bd4ba422ab0e66e89e030c806576753ea3ee08554382c14e685d117b5"
+            ],
+            "markers": "python_version != '3.0.*' and python_version < '4' and python_version != '3.1.*' and python_version != '3.2.*' and python_version != '3.3.*' and python_version >= '2.6'",
+            "version": "==1.23"
         },
         "watchdog": {
             "hashes": [

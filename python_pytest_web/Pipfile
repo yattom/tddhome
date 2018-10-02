@@ -4,24 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-argh = "*"
-atomicwrites = "*"
-attrs = "*"
-colorama = "*"
-docopt = "*"
-more-itertools = "*"
-pathtools = "*"
-pluggy = "*"
-py = "*"
+flask = "*"
 pytest = "*"
 pytest-watch = "*"
-six = "*"
-watchdog = "*"
-PyYAML = "*"
 pytest-bdd = "*"
-flask = "*"
-tddhome-python-pytest-web = {editable = true, path = "."}
 pytest-splinter = "*"
+tddhome-python-pytest-web = {editable = true, path = "."}
+selenium = "*"
 
 [dev-packages]
 

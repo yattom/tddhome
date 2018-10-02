@@ -12,6 +12,9 @@ __pycache__/
 pyvenv.cfg
 pip-selfcheck.json
 
+# for pytest-spliter
+tests.*/
+
 
 #
 # https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore

@@ -19,11 +19,17 @@ class Space:
     
     def finish_moving(self):
         for i in range(self._width - 2):
-            drop = self._items[i]
-            l = 0
-            for j in range(i, self._width):
-                if self._items[j] == drop:
-                    l += 1
+            l = self.count_same_drops_in_a_row(i)
             if l >= 3:
-                self._items = self._items[:i] + ("ー" * l) + self._items[i+l:]
- 
+                self.disappear_consecutive_drops(i, l)
+
+    def count_same_drops_in_a_row(self, col):
+        drop = self._items[col]
+        count = 0
+        for i in range(col, self._width):
+            if self._items[i] == drop:
+                count += 1
+        return count
+    
+    def disappear_consecutive_drops(self, col, count):
+        self._items = self._items[:col] + ("ー" * count) + self._items[col+count:]

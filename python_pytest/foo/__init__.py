@@ -1,0 +1,1 @@
+from foo.target import *

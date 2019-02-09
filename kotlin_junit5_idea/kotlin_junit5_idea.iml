@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../kotlin_junit5_idea">
+      <sourceFolder url="file://$MODULE_DIR$/../kotlin_junit5_idea/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="10" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../kotlin_junit5_idea/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../kotlin_junit5_idea/lib" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../kotlin_junit5_idea/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../kotlin_junit5_idea/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+  </component>
+</module>

@@ -9,5 +9,5 @@ def is_adult(age, sex=None, type=None):
         else:
             raise ValueError()
         return limit <= age
-    _, low, high = list(filter(lambda e: e[0] == type, [("Entry", 13, 65)]))[0]
+    _, low, high = list(filter(lambda e: e[0] == type, [("Movie", 18, 60), ("Zoo", 15, 64]))[0]
     return low <= age <= high

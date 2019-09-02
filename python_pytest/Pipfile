@@ -19,6 +19,7 @@ six = "*"
 watchdog = "*"
 PyYAML = ">4.2b1"
 tddhome-python-pytest = {editable = true, path = "."}
+pyreadline = "*"
 
 [dev-packages]
 

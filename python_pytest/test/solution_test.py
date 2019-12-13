@@ -99,6 +99,23 @@ class Solution:
 
         return -1
 
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """
+        1. Two Sum
+        https://leetcode.com/problems/two-sum/
+        """
+        num_map: Map[int, int] = {}
+        for i, n in enumerate(nums):
+            if n not in num_map:
+                num_map[n] = []
+            num_map[n].append(i)
+        for n in num_map:
+            if (target - n) in num_map:
+                if n == target - n:
+                    if len(num_map[n]) < 2:
+                        continue
+                    return num_map[n]
+                return sorted([num_map[n][0], num_map[target - n][0]])
 
 import pytest
 
@@ -123,3 +140,16 @@ def test_smallestDivisor(sut, nums, threshold, answer):
     ])
 def test_minFlips(sut, mat, answer):
     assert answer == sut.minFlips(mat)
+
+
+@pytest.mark.parametrize('nums, target, answer', [
+        ([2,7,11,15], 9, [0, 1]),
+        ([0, 4, 3, 0], 0, [0, 3]),
+        ([-3,4,3,90], 0, [0, 2]),
+        ([3,2,4], 6, [1, 2]),
+
+    ])
+def test_twoSum(sut, nums, target, answer):
+    assert answer == sut.twoSum(nums, target)
+
+

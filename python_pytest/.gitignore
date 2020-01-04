@@ -12,6 +12,7 @@ __pycache__/
 *pyc
 pyvenv.cfg
 pip-selfcheck.json
+.mypy_cache/
 
 
 #

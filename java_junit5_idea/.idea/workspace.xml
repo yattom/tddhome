@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="//peels-s/peels/" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../peels/dev/webtest" value="PREVIEW" />
-        <entry key="Y:/" value="PREVIEW" />
-      </map>
+  <component name="ChangeListManager">
+    <list default="true" id="dbddc876-0385-4791-bbf7-150806ebeafd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../C++_GoogleTest_VisualStudio2019/googletest/googletest/samples/newsample/newsample.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C++_GoogleTest_VisualStudio2019/googletest/googletest/samples/newsample/newsample.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_pytest/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../python_pytest/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_pytest/test/target_test.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="114" />
-    <option name="y" value="-12" />
-    <option name="width" value="2457" />
-    <option name="height" value="1464" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1d4N2JcI9U2sOvEyYcLIE7zSBAJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet">
@@ -78,23 +100,80 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbddc876-0385-4791-bbf7-150806ebeafd" name="Default Changelist" comment="" />
+      <created>1591680196112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591680196112</updated>
+      <workItem from="1591680197946" duration="421000" />
+      <workItem from="1591680650616" duration="1990000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-3273" y="-320" key="#Project_Structure" timestamp="1591680341809">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state x="-3273" y="-320" key="#Project_Structure/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680341809" />
+    <state x="-3411" y="-324" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591680527544">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state x="-3411" y="-324" key="#com.intellij.execution.impl.EditConfigurationsDialog/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680527544" />
+    <state x="-3014" y="-90" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1591680441578">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state x="-3014" y="-90" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680441578" />
+    <state x="-3085" y="-224" key="FileChooserDialogImpl" timestamp="1591680393255">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state x="-3085" y="-224" key="FileChooserDialogImpl/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680393255" />
+    <state width="1342" height="297" key="GridCell.Tab.0.bottom" timestamp="1591680619068">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.0.bottom/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619068" />
+    <state width="1342" height="297" key="GridCell.Tab.0.center" timestamp="1591680619067">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.0.center/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619067" />
+    <state width="1342" height="297" key="GridCell.Tab.0.left" timestamp="1591680619067">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.0.left/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619067" />
+    <state width="1342" height="297" key="GridCell.Tab.0.right" timestamp="1591680619067">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.0.right/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619067" />
+    <state width="1342" height="297" key="GridCell.Tab.1.bottom" timestamp="1591680619068">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.1.bottom/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619068" />
+    <state width="1342" height="297" key="GridCell.Tab.1.center" timestamp="1591680619068">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.1.center/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619068" />
+    <state width="1342" height="297" key="GridCell.Tab.1.left" timestamp="1591680619068">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.1.left/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619068" />
+    <state width="1342" height="297" key="GridCell.Tab.1.right" timestamp="1591680619068">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state width="1342" height="297" key="GridCell.Tab.1.right/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619068" />
+    <state x="-3385" y="-404" key="SettingsEditor" timestamp="1591680396332">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state x="-3385" y="-404" key="SettingsEditor/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680396332" />
+    <state x="-3158" y="-155" key="com.intellij.ide.util.TipDialog" timestamp="1591680650162">
+      <screen x="-3778" y="-729" width="2498" height="1440" />
+    </state>
+    <state x="-3158" y="-155" key="com.intellij.ide.util.TipDialog/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680650162" />
   </component>
 </project>

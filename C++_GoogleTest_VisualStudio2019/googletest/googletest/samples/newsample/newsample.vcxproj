@@ -36,7 +36,6 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{0673C165-8705-4B05-8A5A-598343C351E9}</ProjectGuid>
     <RootNamespace>newsample</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

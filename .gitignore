@@ -1,4 +1,5 @@
 .idea/vcs.xml
+.mypy_cache/
 
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm

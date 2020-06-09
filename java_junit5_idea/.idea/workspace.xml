@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbddc876-0385-4791-bbf7-150806ebeafd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../C++_GoogleTest_VisualStudio2019/googletest/googletest/samples/newsample/newsample.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C++_GoogleTest_VisualStudio2019/googletest/googletest/samples/newsample/newsample.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python_pytest/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../python_pytest/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python_pytest/test/target_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClosedRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClosedRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClosedRangeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClosedRangeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ClosedRangeTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -55,6 +58,16 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClosedRangeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_junit5_idea" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClosedRangeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClosedRangeTest" />
         <item itemvalue="JUnit.ExampleTest" />
       </list>
     </recent_temporary>
@@ -111,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591680196112</updated>
       <workItem from="1591680197946" duration="421000" />
-      <workItem from="1591680650616" duration="1990000" />
+      <workItem from="1591680650616" duration="4784000" />
     </task>
     <servers />
   </component>
@@ -135,22 +149,22 @@
       <screen x="-3778" y="-729" width="2498" height="1440" />
     </state>
     <state x="-3085" y="-224" key="FileChooserDialogImpl/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680393255" />
-    <state width="1342" height="297" key="GridCell.Tab.0.bottom" timestamp="1591680619068">
+    <state width="1290" height="240" key="GridCell.Tab.0.bottom" timestamp="1591694024864">
       <screen x="-3778" y="-729" width="2498" height="1440" />
     </state>
-    <state width="1342" height="297" key="GridCell.Tab.0.bottom/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619068" />
-    <state width="1342" height="297" key="GridCell.Tab.0.center" timestamp="1591680619067">
+    <state width="1290" height="240" key="GridCell.Tab.0.bottom/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591694024864" />
+    <state width="1290" height="240" key="GridCell.Tab.0.center" timestamp="1591694024864">
       <screen x="-3778" y="-729" width="2498" height="1440" />
     </state>
-    <state width="1342" height="297" key="GridCell.Tab.0.center/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619067" />
-    <state width="1342" height="297" key="GridCell.Tab.0.left" timestamp="1591680619067">
+    <state width="1290" height="240" key="GridCell.Tab.0.center/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591694024864" />
+    <state width="1290" height="240" key="GridCell.Tab.0.left" timestamp="1591694024864">
       <screen x="-3778" y="-729" width="2498" height="1440" />
     </state>
-    <state width="1342" height="297" key="GridCell.Tab.0.left/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619067" />
-    <state width="1342" height="297" key="GridCell.Tab.0.right" timestamp="1591680619067">
+    <state width="1290" height="240" key="GridCell.Tab.0.left/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591694024864" />
+    <state width="1290" height="240" key="GridCell.Tab.0.right" timestamp="1591694024864">
       <screen x="-3778" y="-729" width="2498" height="1440" />
     </state>
-    <state width="1342" height="297" key="GridCell.Tab.0.right/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591680619067" />
+    <state width="1290" height="240" key="GridCell.Tab.0.right/83.0.1624.960/-3778.-729.2498.1440@-3778.-729.2498.1440" timestamp="1591694024864" />
     <state width="1342" height="297" key="GridCell.Tab.1.bottom" timestamp="1591680619068">
       <screen x="-3778" y="-729" width="2498" height="1440" />
     </state>

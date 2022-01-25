@@ -1,0 +1,33 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="NonAsciiCharacters" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="16">
+            <item index="0" class="java.lang.String" itemvalue="six" />
+            <item index="1" class="java.lang.String" itemvalue="pytest" />
+            <item index="2" class="java.lang.String" itemvalue="iniconfig" />
+            <item index="3" class="java.lang.String" itemvalue="atomicwrites" />
+            <item index="4" class="java.lang.String" itemvalue="more-itertools" />
+            <item index="5" class="java.lang.String" itemvalue="pluggy" />
+            <item index="6" class="java.lang.String" itemvalue="py" />
+            <item index="7" class="java.lang.String" itemvalue="pytest-xdist" />
+            <item index="8" class="java.lang.String" itemvalue="pytest-watch" />
+            <item index="9" class="java.lang.String" itemvalue="attrs" />
+            <item index="10" class="java.lang.String" itemvalue="pyyaml" />
+            <item index="11" class="java.lang.String" itemvalue="pathtools" />
+            <item index="12" class="java.lang.String" itemvalue="watchdog" />
+            <item index="13" class="java.lang.String" itemvalue="docopt" />
+            <item index="14" class="java.lang.String" itemvalue="colorama" />
+            <item index="15" class="java.lang.String" itemvalue="argh" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="false">
+      <scope name="Production" level="WEAK WARNING" enabled="true" />
+    </inspection_tool>
+  </profile>
+</component>

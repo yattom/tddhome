@@ -20,5 +20,6 @@ watchdog = "*"
 PyYAML = "*"
 tddhome-python-pytest = {editable = true, path = "."}
 pytest-xdist = "*"
+pytest-cov = "*"
 
 [dev-packages]

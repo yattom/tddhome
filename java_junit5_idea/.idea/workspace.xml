@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10b3f581-b775-4fdd-886a-23b7688876a6" name="Default Changelist" comment="" />
+    <list default="true" id="10b3f581-b775-4fdd-886a-23b7688876a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_pytest/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/../python_pytest/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_pytest/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../python_pytest/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_pytest/foo/target.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python_pytest/foo/target.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_pytest/test/target_test.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -22,6 +31,9 @@
       </map>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="114" />
     <option name="y" value="-12" />
@@ -33,14 +45,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="$PROJECT_DIR$/../../../../../Program Files/nodejs/node" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "demo",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -104,11 +119,16 @@
       <option name="presentableId" value="Default" />
       <updated>1625284138071</updated>
       <workItem from="1625284147462" duration="20000" />
+      <workItem from="1701749762401" duration="84000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="masterDetails">
     <states>

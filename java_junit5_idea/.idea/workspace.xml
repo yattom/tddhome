@@ -51,7 +51,7 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "demo",
+    "git-widget-placeholder": "demo__20240130",
     "go.import.settings.migrated": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -163,7 +163,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-azul-17.0.9-3183f394aec4-cab63407" />
+        <option value="jdk-17.0.10-azul-17.0.10-4caba194b151-cd1dbda1" />
       </set>
     </attachedChunks>
   </component>
@@ -178,6 +178,7 @@
       <workItem from="1625284147462" duration="20000" />
       <workItem from="1701749762401" duration="84000" />
       <workItem from="1702340282214" duration="657000" />
+      <workItem from="1711411246884" duration="93000" />
     </task>
     <servers />
   </component>

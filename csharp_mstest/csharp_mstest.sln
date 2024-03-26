@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_mstest", "csharp_mstest\csharp_mstest.csproj", "{D3D35402-6A0D-4972-8E49-D37A8A2F5B42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csharp_mstest", "csharp_mstest\csharp_mstest.csproj", "{D3D35402-6A0D-4972-8E49-D37A8A2F5B42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_mstest_test", "csharp_mstest_test\csharp_mstest_test.csproj", "{BF3990F4-C5A3-4E9C-BC8A-108AD7B523B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csharp_mstest_test", "csharp_mstest_test\csharp_mstest_test.csproj", "{BF3990F4-C5A3-4E9C-BC8A-108AD7B523B3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D3D35402-6A0D-4972-8E49-D37A8A2F5B42} = {D3D35402-6A0D-4972-8E49-D37A8A2F5B42}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{A03B5FB1-967D-4677-B51B-45E043CD79C3}"
+	ProjectSection(SolutionItems) = preProject
+		ToDo.txt = ToDo.txt
 	EndProjectSection
 EndProject
 Global

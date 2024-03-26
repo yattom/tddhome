@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10b3f581-b775-4fdd-886a-23b7688876a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ClosedRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClosedRangeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -30,6 +39,9 @@
       </map>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -46,12 +58,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in java_junit5_idea.executor": "Run",
     "JUnit.ExampleTest.失敗するテスト.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "demo__20240130",
+    "git-widget-placeholder": "demo__20240326",
     "go.import.settings.migrated": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -64,7 +77,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ExampleTest.失敗するテスト">
+  <component name="RunManager" selected="JUnit.All in java_junit5_idea">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -116,6 +129,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in java_junit5_idea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_junit5_idea" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java_junit5_idea" />
       <option name="PACKAGE_NAME" value="" />
@@ -155,6 +177,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in java_junit5_idea" />
         <item itemvalue="JUnit.ExampleTest.失敗するテスト" />
         <item itemvalue="JUnit.ExampleTest" />
       </list>
@@ -179,6 +202,7 @@
       <workItem from="1701749762401" duration="84000" />
       <workItem from="1702340282214" duration="657000" />
       <workItem from="1711411246884" duration="93000" />
+      <workItem from="1711426147406" duration="3585000" />
     </task>
     <servers />
   </component>

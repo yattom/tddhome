@@ -4,21 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-argh = "*"
-atomicwrites = "*"
-attrs = "*"
-colorama = "*"
-docopt = "*"
-more-itertools = "*"
-pathtools = "*"
-pluggy = "*"
-py = "*"
 pytest = "*"
 pytest-watch = "*"
-six = "*"
-watchdog = "*"
-PyYAML = "*"
-tddhome-python-pytest = {editable = true, path = "."}
 pytest-xdist = "*"
 pytest-cov = "*"
 

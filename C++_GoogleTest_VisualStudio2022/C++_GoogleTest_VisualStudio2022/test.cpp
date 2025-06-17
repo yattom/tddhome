@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "fizzbuzz.h"
 
-TEST(TestCaseName, TestName) {
+TEST(Ç†Ç†Ç†, TestName) {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
 }
@@ -14,7 +14,7 @@ TEST(FizzBuzz, 2ÇÃèÍçáÇÕÇªÇÃÇ‹Ç‹) {
 	EXPECT_EQ("2", fizzbuzz(2));
 }
 
-TEST(FizzBuzz, 3ÇÃèÍçáÇÕFizz) {
+TEST(Ç”Ç°Ç∏ÇŒÇ∏, 3ÇÃèÍçáÇÕFizz) {
 	EXPECT_EQ("Fizz", fizzbuzz(3));
 }
 
